@@ -1,7 +1,7 @@
 [
   {
     "remote": "TeamBliss-Devices",
-    "repository": "android_device_oppo_msm8974-common",
+    "repository": "android_device_oppo-common",
     "target_path": "device/oppo/msm8974-common",
     "revision": "lp5.0"
   }
