@@ -17,6 +17,19 @@
 # Inherit from MSM8974 common
 -include device/oppo/msm8974-common/BoardConfigCommon.mk
 
+BLISS_BUILD_BLOCK := 1
+TARGET_TC_ROM :=4.8-sm
+TARGET_TC_KERNEL :=4.9-sm
+BLISSIFY :=true
+BLISS_O3 :=true
+BLISS_GRAPHITE :=false
+BLISS_STRICT :=true
+BLISS_KRAIT :=true
+BLISS_PIPE := true
+
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
+
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_bacon_defconfig
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
@@ -67,3 +80,5 @@ AUDIO_FEATURE_ENABLED_LOW_LATENCY_CAPTURE := true
 
 # inherit from the proprietary version
 -include vendor/oneplus/bacon/BoardConfigVendor.mk
+
+-include vendor/bliss/config/sm.mk
