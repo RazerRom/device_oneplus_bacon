@@ -17,16 +17,23 @@
 # Inherit from MSM8974 common
 -include device/oppo/msm8974-common/BoardConfigCommon.mk
 
-BLISS_BUILD_BLOCK := 1
-BLISS_WIPE_CACHES := 1
-TARGET_TC_ROM := 4.8-linaro
-TARGET_TC_KERNEL := 4.9-sm
-BLISSIFY := true
-BLISS_O3 := true
-BLISS_GRAPHITE := false
-BLISS_STRICT := true
-BLISS_KRAIT := true
-BLISS_PIPE := true
+# Enable workaround for slow rom flash
+BOARD_SUPPRESS_SECURE_ERASE := true
+COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
+
+# RazerRom Build Options
+RAZER_BUILD_BLOCK := true
+RAZER_WIPE_CACHES := true
+
+# RazerRom Config Flags
+TARGET_TC_ROM := 4.9
+TARGET_TC_KERNEL := 4.9
+RAZERFY := true
+RAZER_O3 := true
+RAZER_STRICT := true
+RAZER_GRAPHITE := true
+RAZER_KRAIT := true
+RAZER_PIPE := true
 
 TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
@@ -34,6 +41,8 @@ TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_bacon_defconfig
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
+
+TOUCH_BOOST_DEBUG := false
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oneplus/bacon/bluetooth
@@ -72,4 +81,5 @@ AUDIO_FEATURE_ENABLED_LOW_LATENCY_CAPTURE := true
 # inherit from the proprietary version
 -include vendor/oneplus/bacon/BoardConfigVendor.mk
 
--include vendor/bliss/config/sm.mk
+# SaberMod
+-include vendor/razer/config/sm.mk

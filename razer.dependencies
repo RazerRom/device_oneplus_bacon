@@ -1,9 +1,9 @@
 [
   {
-    "remote": "github",
-    "repository": "CyanideL/android_kernel_oneplus_msm8974",
+    "remote": "rr",
+    "repository": "kernel_oneplus_msm8974",
     "target_path": "kernel/oneplus/msm8974",
-    "revision": "cm-12.1"
+    "revision": "lp5.1"
   },
   {
     "remote": "cm",
@@ -12,14 +12,14 @@
     "revision": "cm-12.1"
   },
   {
-    "remote": "TeamBliss-Devices",
-    "repository": "android_device_oppo_common",
+    "remote": "rr",
+    "repository": "device_oppo_common",
     "target_path": "device/oppo/common",
     "revision": "lp5.1"
   },
   {
-    "remote": "TeamBliss-Devices",
-    "repository": "android_device_oppo_msm8974-common",
+    "remote": "rr",
+    "repository": "device_oppo_msm8974-common",
     "target_path": "device/oppo/msm8974-common",
     "revision": "lp5.1"
   }
