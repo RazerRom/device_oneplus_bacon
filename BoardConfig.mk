@@ -26,7 +26,7 @@ RAZER_BUILD_BLOCK := true
 RAZER_WIPE_CACHES := true
 
 # RazerRom Config Flags
-TARGET_TC_ROM := 4.9
+TARGET_TC_ROM := 4.8
 TARGET_TC_KERNEL := 4.9
 RAZERFY := true
 RAZER_O3 := true
@@ -39,7 +39,7 @@ TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_bacon_defconfig
+TARGET_KERNEL_CONFIG := ak_bacon_defconfig
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
 
 TOUCH_BOOST_DEBUG := false
