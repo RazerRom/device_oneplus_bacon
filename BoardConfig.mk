@@ -23,7 +23,7 @@ COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
 # RazerRom Build Options
 RAZER_BUILD_BLOCK := true
-RAZER_WIPE_CACHES := true
+RAZER_WIPE_CACHES := false
 
 # RazerRom Config Flags
 TARGET_TC_ROM := 4.8
