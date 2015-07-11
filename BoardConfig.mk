@@ -73,4 +73,3 @@ AUDIO_FEATURE_ENABLED_LOW_LATENCY_CAPTURE := true
 -include vendor/oneplus/bacon/BoardConfigVendor.mk
 
 -include vendor/bliss/config/sm.mk
--include vendor/bliss/config/viper.mk
