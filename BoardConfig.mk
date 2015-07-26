@@ -70,7 +70,7 @@ AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 AUDIO_FEATURE_ENABLED_LOW_LATENCY_CAPTURE := true
 
 # LZMA compression
-WITH_LZMA_OTA := true
+#WITH_LZMA_OTA := true
 
 # inherit from the proprietary version
 -include vendor/oneplus/bacon/BoardConfigVendor.mk
